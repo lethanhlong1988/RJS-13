@@ -210,11 +210,11 @@ header h1 {
 }
 
 #summary {
-  max-width: 40rem;
+  max-width: 430rem;
   margin: 2rem auto;
   padding: 2rem;
-  background: linear-gradient(180deg, #a17eda 0%, #895fc4 100%);
-  color: #191321;
+  background: linear-gradient(180deg, #dbd2eb 0%, #ab92ce 100%);
+  color: #68656d;
   border-radius: 8px;
   box-shadow: 1px 1px 8px 1px rgba(0, 0, 0, 0.6);
   animation: slide-in-from-bottom 0.7s ease-out;
@@ -222,8 +222,8 @@ header h1 {
 
 #summary img {
   display: block;
-  width: 8rem;
-  height: 8rem;
+  width: 6rem;
+  height: 6rem;
   object-fit: contain;
   margin: 0 auto 1rem auto;
   padding: 1rem;
@@ -235,7 +235,7 @@ header h1 {
 
 #summary h2 {
   font-family: "Roboto", sans-serif;
-  font-size: 3rem;
+  font-size: 1rem;
   text-align: center;
   margin: 0;
   text-transform: uppercase;
