@@ -18,13 +18,9 @@ export default function Question({ index, onSelectAnswer, onSkipAnswer }) {
       {/* <MyComponent /> */}
       <QuestionTimer key={index} timeout={10000} onTimeout={onSkipAnswer} />
       <h2>{QUESTIONS[index].text}</h2>
-      <ul id="answers">
-        {shuffleAnswers.map((answer) => (
-          <li key={answer} className="answer">
-            <button onClick={() => onSelectAnswer(answer)}>{answer}</button>
-          </li>
-        ))}
-      </ul>
+      <Answers answers={QUESTIONS[index].answers}
+      onSelectAnswer={onSelectAnswer}
+      />
     </div>
   );
 }
