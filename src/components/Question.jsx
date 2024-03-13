@@ -19,7 +19,7 @@ export default function Question({ index, onSelectAnswer, onSkipAnswer }) {
     setTimeout(() => {
       setAnswer({
         selectedAnswer: answer,
-        isCorrect: QUESTIONS[index].awswer[0] === answer,
+        isCorrect: QUESTIONS[index].answers[0] === answer,
       });
 
       setTimeout(() => {
@@ -38,7 +38,12 @@ export default function Question({ index, onSelectAnswer, onSkipAnswer }) {
   return (
     <div id="question">
       {/* <MyComponent /> */}
-      {/* <QuestionTimer key={index} timeout={10000} onTimeout={onSkipAnswer} /> */}
+      <QuestionTimer
+        key={index}
+        timeout={10000}
+        onTimeout={answer.selectedAnswer === "" ? onSkipAnswer : null}
+        mode={answerState}
+      />
       <h2>{QUESTIONS[index].text}</h2>
       <Answers
         answers={QUESTIONS[index].answers}

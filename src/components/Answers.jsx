@@ -14,7 +14,6 @@ export default function Answers({
   return (
     <ul id="answers">
       {shuffledAnswers.current.map((answer) => {
-        console.log(answer);
         const isSelected = selectedAnswer === answer;
         let cssClass = "";
         if (answerState === "answered" && isSelected) {
@@ -29,7 +28,11 @@ export default function Answers({
         }
         return (
           <li key={answer} className="answer">
-            <button className={cssClass} onClick={() => onSelect(answer)}>
+            <button
+              className={cssClass}
+              onClick={() => onSelect(answer)}
+              disabled={answerState !== ""}
+            >
               {answer}
             </button>
           </li>
